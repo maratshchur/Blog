@@ -38,7 +38,7 @@ def update_blog_post(post_id: str, theme: str, title: str, content: str, author:
         r.hset(post_id, "Title", title)
         r.hset(post_id, "Content", content)
         r.hset(post_id, "Author", author)
-        r.hset(post_id, "Author", last_change_time)
+        r.hset(post_id, "Changed", last_change_time)
 
         return {"message": "Post updated successfully"}
     else:
